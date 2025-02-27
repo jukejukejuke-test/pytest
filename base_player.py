@@ -33,18 +33,23 @@ class Player:
     def description(self):
         return self.info
 
+    """Поднимает уровень персонажа"""
     def level_up(self):
         self.lvl += 1
         self.exp = 0
         self.exp_to_next_lvl *= 1.2
-        self.hp = self.max_hp
+
         if self.char_rase == 'Эльф':
             self.agility += 3
             self.intelligence += 2
             self.strength += 1
             self.damage += 6
+            self.max_hp += 20
         if self.char_rase == 'Дварф':
             self.agility += 2
             self.intelligence += 1
             self.strength += 3
-            self.damage += 6
+            self.damage += 5
+            self.max_hp += 40
+
+        self.hp = self.max_hp
