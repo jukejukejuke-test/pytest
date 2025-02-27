@@ -51,5 +51,5 @@ class Player:
             self.strength += 3
             self.damage += 5
             self.max_hp += 40
-
+#
         self.hp = self.max_hp
